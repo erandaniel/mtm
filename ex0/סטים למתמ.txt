@@ -1,0 +1,75 @@
+PART 2 TESTIM: 4+9 
+cd /home/eran.daniel/matam_tests_spring2022/ex0/mtm_buggy
+
+gcc -std=c99 -Wall -pedantic-errors -Werror -DNDEBUG /home/eran.daniel/ex0/part2/mtm_buggy.c -o mtm_tot
+
+./mtm_tot < test1.in > tmpout11
+./mtm_tot < test2.in > tmpout22
+./mtm_tot < test3.in > tmpout33
+./mtm_tot < test4.in > tmpout44
+./mtm_tot < test_ex_1.in > tmpout1
+./mtm_tot < test_ex_2.in > tmpout2
+./mtm_tot < test_ex_3.in > tmpout3
+./mtm_tot < test_ex_4.in > tmpout4
+./mtm_tot < test_ex_5.in > tmpout5
+./mtm_tot < test_ex_7.sh > tmpout7
+./mtm_tot < test_ex_9.in > tmpout9
+
+diff test1.out tmpout11
+diff test2.out tmpout22
+diff test3.out tmpout33
+diff test4.out tmpout44
+diff test_ex_1.out tmpout1
+diff test_ex_2.out tmpout2
+diff test_ex_3.out tmpout3
+diff test_ex_4.out tmpout4
+diff test_ex_5.out tmpout5
+diff test_ex_9.out tmpout9
+diff 7.out tmpout7
+
+Segmentation fault (core dumped)
+in -> 2147483647 -> EOF
+
+PART 1 1-17 TESTIM
+cd /home/eran.daniel/matam_tests_spring2022/ex0/part1
+
+gcc -std=c99 -Wall -pedantic-errors -Werror -DNDEBUG /home/eran.daniel/ex0/part1/part1.c -o mtm_tot
+
+./mtm_tot < test1.in > tmpout1
+./mtm_tot < test2.in > tmpout2
+./mtm_tot < test3.in > tmpout3
+./mtm_tot < test4.in > tmpout4
+./mtm_tot < test5.in > tmpout5
+./mtm_tot < test6.in > tmpout6
+./mtm_tot < test7.in > tmpout7
+./mtm_tot < test8.in > tmpout8
+./mtm_tot < test9.in > tmpout9
+./mtm_tot < test10.sh > tmpout10
+./mtm_tot < test11.in > tmpout11
+./mtm_tot < test12.in > tmpout12
+./mtm_tot < test13.in > tmpout13
+./mtm_tot < test14.in > tmpout14
+./mtm_tot < test15.in > tmpout15
+./mtm_tot < test16.in > tmpout16
+./mtm_tot < test17.in > tmpout17
+diff test1.out tmpout1
+diff test2.out tmpout2
+diff test3.out tmpout3
+diff test4.out tmpout4
+diff test5.out tmpout5
+diff test6.out tmpout6
+diff test7.out tmpout7
+diff test8.out tmpout8
+diff test9.out tmpout9
+diff 10.out tmpout10
+diff test11.out tmpout11
+diff test14.out tmpout14
+diff test15.out tmpout15
+diff test16.out tmpout16
+diff test17.out tmpout17
+*** diff test12.out tmpout12
+TEST 12 ->
+2
+5
+*** diff test13.out tmpout13
+TEST 13 -> 

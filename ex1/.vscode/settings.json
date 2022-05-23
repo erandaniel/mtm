@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "test_utilities.h": "c",
+        "stdio.h": "c",
+        "asciiarttool.h": "c",
+        "rlelist.h": "c"
+    }
+}
